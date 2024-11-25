@@ -21,6 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <stdio.h>
 #include <stdbool.h>
 /* USER CODE END Includes */
 
@@ -90,8 +91,12 @@ int main(void) {
 	/* Infinite loop */
 	/* USER CODE BEGIN WHILE */
 	while (1) {
-
-		int array[10];
+		static uint32_t count = 0;
+		uint32_t* pt;
+		pt = &count;
+		printf("Hello World = %d\n", count);
+		count+=(0x808001);
+//		int array[10];
 
 		for (int i = 0; i < 123; i++) {
 
